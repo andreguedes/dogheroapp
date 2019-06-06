@@ -1,9 +1,12 @@
 package br.com.doghero.dhproject
 
-class MyHeroes {
+import br.com.doghero.dhproject.data.model.HeroesResponse
+import com.google.gson.Gson
 
-    fun build(json: String): MyHeroes? {
-        return null
+object MyHeroes {
+
+    fun build(json: String): HeroesResponse? {
+        return Gson().fromJson(json, HeroesResponse::class.java)
     }
 
 }
