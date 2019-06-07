@@ -1,6 +1,7 @@
 package br.com.doghero.dhproject
 
 import br.com.doghero.dhproject.data.model.HeroesResponse
+import br.com.doghero.dhproject.data.source.MyHeroes
 import org.junit.Assert.*
 import org.junit.Test
 
