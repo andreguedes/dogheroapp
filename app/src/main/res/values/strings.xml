@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Meus heróis</string>
+    <string name="per_night">por noite</string>
+    <string name="talk">Conversar</string>
+    <string name="book_again">Reservar de novo</string>
 </resources>

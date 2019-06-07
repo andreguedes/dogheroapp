@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_hero_avatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:src="@drawable/user_avatar"
+            android:layout_marginBottom="@dimen/default_margin"
+            app:layout_constraintBottom_toTopOf="@+id/btn_hero_talk"/>
+
+    <ImageView
+            android:id="@+id/img_superhero"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/host_list_icon_badge"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/img_hero_avatar"
+            app:layout_constraintBottom_toBottomOf="@id/img_hero_avatar"/>
+
+    <TextView
+            android:id="@+id/txt_hero_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MyHeroNameTextAppearance"
+            tools:text="My Hero name"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintStart_toEndOf="@+id/img_hero_avatar"
+            app:layout_constraintTop_toTopOf="@+id/img_hero_avatar"
+            app:layout_constraintEnd_toStartOf="@+id/img_hero_heart"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"/>
+
+    <TextView
+            android:id="@+id/txt_hero_neighborhood"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            style="@style/MyHeroNeighborhoodTextAppearance"
+            tools:text="Hero neighborhood"
+            app:layout_constraintStart_toStartOf="@+id/txt_hero_name"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hero_name"
+            app:layout_constraintBottom_toTopOf="@+id/rt_hero_stars"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"/>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rt_hero_stars"
+            style="?android:attr/ratingBarStyleSmall"
+            tools:rating="5"
+            android:theme="@style/MyHeroRatingAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/txt_hero_neighborhood"
+            app:layout_constraintBottom_toBottomOf="@+id/img_hero_avatar"/>
+
+    <TextView
+            android:id="@+id/txt_hero_rating_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyHeroTextAppearance"
+            tools:text="(128)"
+            app:layout_constraintStart_toEndOf="@+id/rt_hero_stars"
+            app:layout_constraintTop_toTopOf="@+id/rt_hero_stars"
+            app:layout_constraintBottom_toBottomOf="@+id/rt_hero_stars"/>
+
+    <ImageView
+            android:id="@+id/img_hero_heart"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="gone"
+            tools:src="@drawable/icon_like_filled_vector_red"
+            tools:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"/>
+
+    <TextView
+            android:id="@+id/txt_hero_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyHeroPriceAppearance"
+            tools:text="R$ 78"
+            app:layout_constraintTop_toBottomOf="@+id/img_hero_heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyHeroTextAppearance"
+            android:text="@string/per_night"
+            app:layout_constraintEnd_toEndOf="@+id/txt_hero_price"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hero_price"
+            android:id="@+id/textView"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_hero_talk"
+            style="@style/MyHeroButtonBorderStyle"
+            android:text="@string/talk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginRight="@dimen/button_margin"
+            android:layout_marginBottom="@dimen/button_margin"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_hero_book"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_hero_book"
+            style="@style/MyHeroButtonFilledStyle"
+            android:text="@string/book_again"
+            android:layout_width="0dp"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginRight="@dimen/button_margin"
+            android:layout_marginBottom="@dimen/button_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_hero_talk"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
