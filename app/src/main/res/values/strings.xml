@@ -3,4 +3,8 @@
     <string name="per_night">por noite</string>
     <string name="talk">Conversar</string>
     <string name="book_again">Reservar de novo</string>
+    <string name="header_recents">Heróis com quem hospedei</string>
+    <string name="header_favorites">Heróis favoritos</string>
+    <string name="money_format">R$%s</string>
+    <string name="empty_heroes">Você ainda não fez uma hospedagem e nem favoritou um anfitrião</string>
 </resources>

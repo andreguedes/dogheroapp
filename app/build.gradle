@@ -12,13 +12,22 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    useLibrary 'android.test.runner'
+    useLibrary 'android.test.base'
+    useLibrary 'android.test.mock'
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
     }
 }
 
@@ -31,8 +40,18 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.2.0-alpha01'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.0'
+    implementation 'org.koin:koin-androidx-scope:2.0.0-rc-2'
+    implementation 'org.koin:koin-androidx-viewmodel:2.0.0-rc-2'
 
     testImplementation 'junit:junit:4.12'
+    testImplementation 'io.mockk:mockk:1.9'
+    testImplementation 'android.arch.core:core-testing:1.1.1'
+
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
 }

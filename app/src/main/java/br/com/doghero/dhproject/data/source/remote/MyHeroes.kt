@@ -1,4 +1,4 @@
-package br.com.doghero.dhproject.data.source
+package br.com.doghero.dhproject.data.source.remote
 
 import br.com.doghero.dhproject.data.model.HeroesResponse
 import com.google.gson.Gson

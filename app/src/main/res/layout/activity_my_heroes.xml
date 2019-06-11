@@ -30,4 +30,18 @@
             app:layout_constraintEnd_toEndOf="@+id/rv_my_heroes"
             app:layout_constraintStart_toStartOf="@+id/rv_my_heroes"/>
 
+    <TextView
+            android:id="@+id/txt_empty_message"
+            android:text="@string/empty_heroes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:textAlignment="center"
+            tools:visibility="visible"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

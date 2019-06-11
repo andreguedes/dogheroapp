@@ -85,9 +85,8 @@
             android:visibility="gone"
             tools:src="@drawable/icon_like_filled_vector_red"
             tools:visibility="visible"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_hero_name"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/default_margin"
             android:layout_marginEnd="@dimen/default_margin"
             android:layout_marginRight="@dimen/default_margin"/>
 
