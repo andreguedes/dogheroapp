@@ -16,22 +16,24 @@ class MyHeroesInteractor {
 
     private fun createHeroItemsList(heroesResponse: HeroesResponse?): ArrayList<HeroItem> {
         val heroItemsList = arrayListOf<HeroItem>()
-        heroesResponse?.recents?.let {
-            if (!it.isNullOrEmpty()) {
-                heroItemsList.add(Header(R.string.header_recents))
-                it.map { hero ->
-                    hero.heroStatus = HeroStatus.RECENT
-                    heroItemsList.add(hero)
+        heroesResponse?.let { heroes ->
+            heroes.recents?.let {
+                if (!it.isNullOrEmpty()) {
+                    heroItemsList.add(Header(R.string.header_recents))
+                    it.map { hero ->
+                        hero.heroStatus = HeroStatus.RECENT
+                        heroItemsList.add(hero)
+                    }
                 }
             }
-        }
-        heroesResponse?.favorites?.let {
-            if (!it.isNullOrEmpty()) {
-                heroItemsList.add(Header(R.string.header_favorites))
-                it.map { hero ->
-                    hero.heroStatus = HeroStatus.FAVORITE
-                    hero.isFavorite = true
-                    heroItemsList.add(hero)
+            heroes.favorites?.let {
+                if (!it.isNullOrEmpty()) {
+                    heroItemsList.add(Header(R.string.header_favorites))
+                    it.map { hero ->
+                        hero.heroStatus = HeroStatus.FAVORITE
+                        hero.isFavorite = true
+                        heroItemsList.add(hero)
+                    }
                 }
             }
         }

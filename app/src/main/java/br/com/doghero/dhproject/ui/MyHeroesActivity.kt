@@ -46,6 +46,7 @@ class MyHeroesActivity : AppCompatActivity() {
                 is MyHeroesViewState.MyHeroesList -> setItems(it.heroesList)
                 is MyHeroesViewState.EmptyHeroesList -> showEmptyMessage()
             }
+            hideProgressBar()
         })
     }
 
@@ -54,7 +55,12 @@ class MyHeroesActivity : AppCompatActivity() {
     }
 
     private fun showEmptyMessage() {
+        rv_my_heroes.visibility = View.GONE
         txt_empty_message.visibility = View.VISIBLE
+    }
+
+    private fun hideProgressBar() {
+        pgb_my_heroes.visibility = View.GONE
     }
 
 }

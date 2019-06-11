@@ -51,25 +51,4 @@ class MyHeroesActivityTest {
             .check(matches(hasDescendant(withText("Marina"))))
     }
 
-    private fun loadMyHeroes(): ArrayList<HeroItem> {
-        return arrayListOf(
-            Header(R.string.header_recents),
-            getHero(HeroStatus.RECENT, false, true),
-            Header(R.string.header_favorites),
-            getHero(HeroStatus.FAVORITE, true, true),
-            getHero(HeroStatus.FAVORITE, true, false),
-            getHero(HeroStatus.FAVORITE, true, false),
-            getHero(HeroStatus.FAVORITE, true, true)
-        )
-    }
-
-    private fun getHero(status: HeroStatus, favorite: Boolean, superhero: Boolean): Hero {
-        val user = User(
-            firstName = "Andre", imageUrl = "https://avatars1.githubusercontent.com/u/4925429?s=460&amp;v=4"
-        )
-        return Hero(
-            id = 1, isFavorite = favorite, price = 45, addressNeighborhood = "Rua Teste, 45", user = user, isSuperhero = superhero, heroStatus = status
-        )
-    }
-
 }
