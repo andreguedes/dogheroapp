@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyHeroSectionTextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorGrey</item>
+    </style>
+
+    <style name="MyHeroNameTextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorGreyDark</item>
+    </style>
+
+    <style name="MyHeroNeighborhoodTextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorGreyLight</item>
+    </style>
+
+    <style name="MyHeroPriceAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorGreyDark</item>
+    </style>
+
+    <style name="MyHeroTextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorGreyLight</item>
+    </style>
+
+    <style name="MyHeroRatingAppearance">
+        <item name="colorAccent">@color/colorYellow</item>
+    </style>
+
+    <style name="MyHeroButtonStyle" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MyHeroButtonFilledStyle" parent="MyHeroButtonStyle">
+        <item name="android:background">@drawable/button_accent_filled</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyHeroButtonBorderStyle" parent="MyHeroButtonStyle">
+        <item name="android:background">@drawable/button_border</item>
+        <item name="android:textColor">@color/colorGreyLight</item>
+    </style>
+    
+</resources>
